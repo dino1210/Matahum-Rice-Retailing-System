@@ -79,6 +79,7 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
         }
 
         .dashboard-section h2 {
@@ -117,6 +118,17 @@
             font-weight: bold;
             color: #333;
         }
+
+        .dashboard-card ul {
+            margin-top: 20px;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        .dashboard-card li {
+            padding: 5px 0;
+            border-bottom: 1px solid #ccc;
+        }
     </style>
 </head>
 <body>
@@ -145,23 +157,12 @@
                 <div class="dashboard-cards">
                     <div class="dashboard-card">
                         <h3>Total Products</h3>
-                        <p><?php echo $totalProducts; ?></p>
+                        <p>250</p>
                     </div>
                     <div class="dashboard-card">
                         <h3>Total Categories</h3>
-                        <p><?php echo $totalCategories; ?></p>
+                        <p>15</p>
                     </div>
                     <div class="dashboard-card">
                         <h3>Total Suppliers</h3>
-                        <p><?php echo $totalSuppliers; ?></p>
-                    </div>
-                    <div class="dashboard-card">
-                        <h3>Total Reports</h3>
-                        <p><?php echo $totalReports; ?></p>
-                    </div>
-                </div>
-            </section>
-        </main>
-    </div>
-</body>
-</html>
+                        <p>
