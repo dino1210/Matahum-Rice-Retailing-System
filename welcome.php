@@ -98,7 +98,7 @@
             border-radius: 10px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
-            flex-basis: calc(50% - 20px);
+            flex-basis: calc(33.333% - 20px);
             transition: transform 0.3s;
         }
 
@@ -129,7 +129,43 @@
             padding: 5px 0;
             border-bottom: 1px solid #ccc;
         }
+
+        /* Chart Styles */
+        .chart-container {
+            position: relative;
+            height: 400px;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        /* Recent Activity Styles */
+        .activity-log {
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .activity-log h2 {
+            margin-top: 0;
+        }
+
+        .activity-log ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .activity-log ul li {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .activity-log ul li:last-child {
+            border-bottom: none;
+        }
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <div class="container">
@@ -141,6 +177,7 @@
                 <ul>
                     <li><a href="welcome.php">Dashboard</a></li>
                     <li><a href="products.php">Products</a></li>
+                    <li><a href="categories.php">Categories</a></li>
                     <li><a href="suppliers.php">Suppliers</a></li>
                     <li><a href="reports.php">Reports</a></li>
                     <li><a href="settings.php">Settings</a></li>
@@ -164,4 +201,81 @@
                     </div>
                     <div class="dashboard-card">
                         <h3>Total Suppliers</h3>
-                        <p>
+                        <p>10</p>
+                    </div>
+                    <div class="dashboard-card">
+                        <h3>Monthly Sales</h3>
+                        <p>$12,000</p>
+                    </div>
+                    <div class="dashboard-card">
+                        <h3>Low Stock Alerts</h3>
+                        <ul>
+                            <li>Basmati Rice - 10kg</li>
+                            <li>Jasmine Rice - 5kg</li>
+                            <li>Arborio Rice - 8kg</li>
+                        </ul>
+                    </div>
+                    <div class="dashboard-card">
+                        <h3>Recent Orders</h3>
+                        <ul>
+                            <li>Order #1024 - 5kg Basmati Rice</li>
+                            <li>Order #1023 - 10kg Jasmine Rice</li>
+                            <li>Order #1022 - 25kg Arborio Rice</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="dashboard-section chart-container">
+                <h2>Sales Chart</h2>
+                <canvas id="salesChart"></canvas>
+            </section>
+            <section class="dashboard-section activity-log">
+                <h2>Recent Activity</h2>
+                <ul>
+                    <li>New supplier added: Supplier A</li>
+                    <li>Product stock updated: Jasmine Rice - 100kg</li>
+                    <li>New order placed: Order #1025</li>
+                    <li>Report generated: Monthly Sales Report</li>
+                </ul>
+            </section>
+        </main>
+    </div>
+    <script>
+        // Sample data for the chart
+        const data = {
+            labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+            datasets: [{
+                label: 'Sales ($)',
+                data: [3000, 2000, 5000, 7000, 4000, 8000],
+                backgroundColor: 'rgba(52, 152, 219, 0.2)',
+                borderColor: 'rgba(52, 152, 219, 1)',
+                borderWidth: 1
+            }]
+        };
+
+        // Config for the chart
+        const config = {
+            type: 'line',
+            data: data,
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Monthly Sales Data'
+                    }
+                }
+            },
+        };
+
+        // Render the chart
+        window.onload = function() {
+            const ctx = document.getElementById('salesChart').getContext('2d');
+            new Chart(ctx, config);
+        };
+    </script>
+</body>
+</html>
