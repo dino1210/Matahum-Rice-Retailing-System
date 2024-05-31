@@ -37,7 +37,7 @@
         }
 
         .sidebar-header img {
-            width: 80px;
+            width: 120px;
             height: auto;
             margin-bottom: 10px;
         }
@@ -185,7 +185,7 @@
         <aside class="sidebar">
             <div class="sidebar-header">
                 <img src="Matahum Logo.png" alt="Logo">
-                <h2>Inventory</h2>
+                <h2>MATAHUM RICE TRADING</h2>
             </div>
             <nav class="nav-menu">
                 <ul>

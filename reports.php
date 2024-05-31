@@ -139,6 +139,12 @@
             font-size: 24px;
         }
 
+        .sidebar-header img {
+            width: 120px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
         .nav-menu ul {
             list-style: none;
             padding: 0;
@@ -166,7 +172,8 @@
     <div class="container">
         <aside class="sidebar">
             <div class="sidebar-header">
-                <h2>Inventory</h2>
+                <img src="Matahum Logo.png" alt="Logo">
+                <h2>MATAHUM RICE TRADING</h2>
             </div>
             <nav class="nav-menu">
                 <ul>
