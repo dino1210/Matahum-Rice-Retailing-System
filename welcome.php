@@ -23,11 +23,23 @@
             background-color: #2c3e50;
             color: #fff;
             padding: 20px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .sidebar-header {
             text-align: center;
             margin-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .sidebar-header img {
+            width: 80px;
+            height: auto;
+            margin-bottom: 10px;
         }
 
         .sidebar-header h2 {
@@ -39,6 +51,7 @@
             list-style: none;
             padding: 0;
             margin: 0;
+            width: 100%;
         }
 
         .nav-menu ul li {
