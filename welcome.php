@@ -171,6 +171,7 @@
     <div class="container">
         <aside class="sidebar">
             <div class="sidebar-header">
+                <img src="Matahum Logo.png" alt="Logo">
                 <h2>Inventory</h2>
             </div>
             <nav class="nav-menu">
