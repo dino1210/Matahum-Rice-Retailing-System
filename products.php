@@ -9,6 +9,8 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f4f4f9;
+            display: flex;
         }
 
         header {
@@ -18,6 +20,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            width: 100%;
         }
 
         h1 {
@@ -81,7 +84,8 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            margin-top: 30px;
+            margin: 30px 20px;
+            width: calc(100% - 40px);
         }
 
         .add-product-form label {
@@ -113,56 +117,129 @@
         .add-product-form button:hover {
             background-color: #2980b9;
         }
+
+        /* Sidebar Styles */
+        .container {
+            display: flex;
+            width: 100%;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        .sidebar-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .sidebar-header h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .nav-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-menu ul li {
+            margin-bottom: 10px;
+        }
+
+        .nav-menu ul li a {
+            display: block;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #fff;
+            transition: background-color 0.3s;
+        }
+
+        .nav-menu ul li a:hover {
+            background-color: #34495e;
+        }
+
+        /* Main Content Styles */
+        .main-content {
+            flex-grow: 1;
+            padding: 20px;
+        }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Rice Variety Products</h1>
-        <div class="return-dashboard">
-            <a href="welcome.php">Return to Dashboard</a>
-        </div>
-    </header>
-    <main class="cabinet">
-        <!-- Product cards here -->
-        <div class="product">
-            <h2>Basmati Rice</h2>
-            <p>High-quality long-grain rice known for its fragrance and delicate flavor.</p>
-            <ul>
-                <li>5kg Pack</li>
-                <li>10kg Pack</li>
-                <li>25kg Pack</li>
-            </ul>
-        </div>
-        <div class="product">
-            <h2>Jasmine Rice</h2>
-            <p>Aromatic long-grain rice commonly used in Southeast Asian cuisine.</p>
-            <ul>
-                <li>5kg Pack</li>
-                <li>10kg Pack</li>
-                <li>25kg Pack</li>
-            </ul>
-        </div>
-        <div class="product">
-            <h2>Arborio Rice</h2>
-            <p>Short-grain rice known for its high starch content, ideal for risotto.</p>
-            <ul>
-                <li>5kg Pack</li>
-                <li>10kg Pack</li>
-                <li>25kg Pack</li>
-            </ul>
-        </div>
-        <!-- Add more rice products here -->
+    <div class="container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Inventory</h2>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="welcome.php">Dashboard</a></li>
+                    <li><a href="products.php">Products</a></li>
+                    <li><a href="categories.php">Categories</a></li>
+                    <li><a href="suppliers.php">Suppliers</a></li>
+                    <li><a href="reports.php">Reports</a></li>
+                    <li><a href="settings.php">Settings</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <div class="main-content">
+            <header>
+                <h1>Rice Variety Products</h1>
+                <div class="return-dashboard">
+                    <a href="welcome.php">Return to Dashboard</a>
+                </div>
+            </header>
+            <main class="cabinet">
+                <!-- Product cards here -->
+                <div class="product">
+                    <h2>Basmati Rice</h2>
+                    <p>High-quality long-grain rice known for its fragrance and delicate flavor.</p>
+                    <ul>
+                        <li>5kg Pack</li>
+                        <li>10kg Pack</li>
+                        <li>25kg Pack</li>
+                    </ul>
+                </div>
+                <div class="product">
+                    <h2>Jasmine Rice</h2>
+                    <p>Aromatic long-grain rice commonly used in Southeast Asian cuisine.</p>
+                    <ul>
+                        <li>5kg Pack</li>
+                        <li>10kg Pack</li>
+                        <li>25kg Pack</li>
+                    </ul>
+                </div>
+                <div class="product">
+                    <h2>Arborio Rice</h2>
+                    <p>Short-grain rice known for its high starch content, ideal for risotto.</p>
+                    <ul>
+                        <li>5kg Pack</li>
+                        <li>10kg Pack</li>
+                        <li>25kg Pack</li>
+                    </ul>
+                </div>
+                <!-- Add more rice products here -->
 
-        <!-- Add new product form here -->
-        <div class="add-product-form">
-            <h2>Add New Product</h2>
-            <form action="add_product.php" method="POST">
-                <label for="product_name">Product Name:</label>
-                <input type="text" id="product_name" name="product_name" required>
-                <label for="description">Description:</label>
-                <textarea id="description" name="description" required></textarea>
-                <label for="sizes">Available Sizes:</label>
-                <input type="text" id="sizes" name="sizes" required>
-                <button type="submit">Add Product</button>
-            </form>
+                <!-- Add new product form here -->
+                <div class="add-product-form">
+                    <h2>Add New Product</h2>
+                    <form action="add_product.php" method="POST">
+                        <label for="product_name">Product Name:</label>
+                        <input type="text" id="product_name" name="product_name" required>
+                        <label for="description">Description:</label>
+                        <textarea id="description" name="description" required></textarea>
+                        <label for="sizes">Available Sizes:</label>
+                        <input type="text" id="sizes" name="sizes" required>
+                        <button type="submit">Add Product</button>
+                    </form>
+                </div>
+            </main>
         </div>
+    </div>
+</body>
+</html>

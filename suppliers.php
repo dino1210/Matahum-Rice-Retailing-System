@@ -45,6 +45,11 @@
         }
 
         .container {
+            display: flex;
+        }
+
+        .main-content {
+            flex-grow: 1;
             padding: 20px;
         }
 
@@ -112,46 +117,103 @@
         .add-supplier-form button:hover {
             background-color: #2980b9;
         }
+
+        /* Sidebar Styles */
+        .sidebar {
+            width: 250px;
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        .sidebar-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .sidebar-header h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .nav-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-menu ul li {
+            margin-bottom: 10px;
+        }
+
+        .nav-menu ul li a {
+            display: block;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #fff;
+            transition: background-color 0.3s;
+        }
+
+        .nav-menu ul li a:hover {
+            background-color: #34495e;
+        }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Suppliers</h1>
-        <div class="return-dashboard">
-            <a href="welcome.php">Return to Dashboard</a>
-        </div>
-    </header>
     <div class="container">
-        <div class="suppliers-list">
-            <h2>All Suppliers</h2>
-            <div class="supplier">
-                <h3>Supplier A</h3>
-                <p>Contact: John Doe</p>
-                <p>Phone: (123) 456-7890</p>
-                <p>Email: john@example.com</p>
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Inventory</h2>
             </div>
-            <div class="supplier">
-                <h3>Supplier B</h3>
-                <p>Contact: Jane Smith</p>
-                <p>Phone: (987) 654-3210</p>
-                <p>Email: jane@example.com</p>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="welcome.php">Dashboard</a></li>
+                    <li><a href="products.php">Products</a></li>
+                    <li><a href="categories.php">Categories</a></li>
+                    <li><a href="suppliers.php">Suppliers</a></li>
+                    <li><a href="reports.php">Reports</a></li>
+                    <li><a href="settings.php">Settings</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <div class="main-content">
+            <header>
+                <h1>Suppliers</h1>
+                <div class="return-dashboard">
+                    <a href="welcome.php">Return to Dashboard</a>
+                </div>
+            </header>
+            <div class="suppliers-list">
+                <h2>All Suppliers</h2>
+                <div class="supplier">
+                    <h3>Supplier A</h3>
+                    <p>Contact: John Doe</p>
+                    <p>Phone: (123) 456-7890</p>
+                    <p>Email: john@example.com</p>
+                </div>
+                <div class="supplier">
+                    <h3>Supplier B</h3>
+                    <p>Contact: Jane Smith</p>
+                    <p>Phone: (987) 654-3210</p>
+                    <p>Email: jane@example.com</p>
+                </div>
+                <!-- Add more supplier entries as needed -->
             </div>
-            <!-- Add more supplier entries as needed -->
-        </div>
 
-        <div class="add-supplier-form">
-            <h2>Add New Supplier</h2>
-            <form action="add_supplier.php" method="POST">
-                <label for="supplier_name">Supplier Name:</label>
-                <input type="text" id="supplier_name" name="supplier_name" required>
-                <label for="contact_name">Contact Name:</label>
-                <input type="text" id="contact_name" name="contact_name" required>
-                <label for="phone">Phone:</label>
-                <input type="text" id="phone" name="phone" required>
-                <label for="email">Email:</label>
-                <input type="text" id="email" name="email" required>
-                <button type="submit">Add Supplier</button>
-            </form>
+            <div class="add-supplier-form">
+                <h2>Add New Supplier</h2>
+                <form action="add_supplier.php" method="POST">
+                    <label for="supplier_name">Supplier Name:</label>
+                    <input type="text" id="supplier_name" name="supplier_name" required>
+                    <label for="contact_name">Contact Name:</label>
+                    <input type="text" id="contact_name" name="contact_name" required>
+                    <label for="phone">Phone:</label>
+                    <input type="text" id="phone" name="phone" required>
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" name="email" required>
+                    <button type="submit">Add Supplier</button>
+                </form>
+            </div>
         </div>
     </div>
 </body>
