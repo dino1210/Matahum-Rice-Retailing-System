@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rice Retailing Inventory Management Dashboard</title>
+    <title>Matahum Inventory Management Dashboard</title>
     <style>
         /* Global Styles */
         body {
@@ -122,14 +122,14 @@
         .dashboard-card h3 {
             margin-top: 0;
             font-size: 18px;
-            color: #333;
+            color: #black;
         }
 
         .dashboard-card p {
             margin: 10px 0 0;
             font-size: 24px;
             font-weight: bold;
-            color: #333;
+            color: #black;
         }
 
         .dashboard-card ul {
@@ -194,7 +194,6 @@
                     <li><a href="categories.php">Categories</a></li>
                     <li><a href="suppliers.php">Suppliers</a></li>
                     <li><a href="reports.php">Reports</a></li>
-                    <li><a href="settings.php">Settings</a></li>
                 </ul>
             </nav>
         </aside>
