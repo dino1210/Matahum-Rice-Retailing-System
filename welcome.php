@@ -118,7 +118,7 @@
         <a href="products.php">Products</a>
         <a href="suppliers.php">Suppliers</a>
         <a href="reports.php">Report</a>
-        <a href="#">Settings</a>
+        <a href="settings.php">Settings</a>
     </div>
 
     <div class="main-content">
