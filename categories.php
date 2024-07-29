@@ -168,6 +168,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <li><a href="categories.php">Categories</a></li>
             <li><a href="suppliers.php">Suppliers</a></li>
             <li><a href="reports.php">Reports</a></li>
+            <li><a href="settings.php">Settings</a></li>
         </ul>
     </div>
     <div class="main-content">

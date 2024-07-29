@@ -46,6 +46,19 @@ $currentSettings = $_SESSION['settings'];
     </style>
 </head>
 <body>
+    <div class="sidebar">
+        <div class="logo">
+            <img src="Matahum Logo.png" alt="Matahum Logo">
+        </div>
+        <ul>
+            <li><a href="welcome.php">Dashboard</a></li>
+            <li><a href="products.php">Products</a></li>
+            <li><a href="categories.php">Categories</a></li>
+            <li><a href="suppliers.php">Suppliers</a></li>
+            <li><a href="reports.php">Reports</a></li>
+            <li><a href="settings.php">Settings</a></li>
+        </ul>
+    </div>
     <h1>Settings</h1>
     <form method="POST">
         <label for="mode">Mode:</label>
